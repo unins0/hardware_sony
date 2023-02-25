@@ -1,0 +1,5 @@
+# Display Features
+allow system_app vendor_sysfs_graphics:dir search;
+allow system_app vendor_sysfs_graphics:file rw_file_perms;
+allow system_app sysfs_dp:dir search;
+allow system_app sysfs_dp:file rw_file_perms;
