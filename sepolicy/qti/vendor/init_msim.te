@@ -9,3 +9,5 @@ allow init-qcom-msim-sh block_device:dir search;
 allow init-qcom-msim-sh ltalabel_block_device:blk_file r_file_perms;
 
 set_prop(init-qcom-msim-sh, vendor_radio_prop)
+
+set_prop(init-qcom-msim-sh, vendor_nfc_prop)
