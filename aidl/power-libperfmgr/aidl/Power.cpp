@@ -104,6 +104,12 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
         PowerSessionManager::getInstance()->updateHintMode(toString(type), enabled);
     }
     switch (type) {
+       case Mode::DOUBLE_TAP_TO_WAKE:
+            ::android::base::WriteStringToFile(enabled ? "sod_enable,1" : "sod_enable,0",
+                                               "/sys/devices/virtual/sec/tsp/cmd");
+            ::android::base::WriteStringToFile(enabled ? "1" : "0",
+                                               "/sys/devices/dsi_panel_driver/pre_sod_mode");
+            break;
         case Mode::LOW_POWER:
             mDisplayLowPower->SetDisplayLowPower(enabled);
             if (enabled) {
@@ -123,8 +129,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             if (mSustainedPerfModeOn) {
                 break;
             }
-            [[fallthrough]];
-        case Mode::DOUBLE_TAP_TO_WAKE:
             [[fallthrough]];
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
@@ -179,8 +183,8 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool *_aidl_return) {
             return ndk::ScopedAStatus::ok();
     }
     bool supported = HintManager::GetInstance()->IsHintSupported(toString(type));
-    // LOW_POWER handled insides PowerHAL specifically
-    if (type == Mode::LOW_POWER) {
+    // LOW_POWER and DOUBLE_TAP_TO_WAKE handled insides PowerHAL specifically
+    if (type == Mode::LOW_POWER || type == Mode::DOUBLE_TAP_TO_WAKE) {
         supported = true;
     }
     if (!supported && HintManager::GetInstance()->IsAdpfProfileSupported(toString(type))) {
