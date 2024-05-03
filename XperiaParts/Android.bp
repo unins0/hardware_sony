@@ -2,7 +2,10 @@ android_app {
     name: "XperiaParts",
     defaults: ["SettingsLibDefaults"],
 
-    srcs: ["src/**/*.kt"],
+    srcs: [
+           "src/**/*.kt",
+           "src/**/*.java"
+          ],
     resource_dirs: ["res"],
 
     certificate: "platform",

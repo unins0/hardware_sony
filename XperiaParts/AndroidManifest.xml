@@ -36,5 +36,24 @@
                        android:resource="@string/display_setting_summary"/>
         </activity>
 
+        <activity
+            android:name=".audio.AudioActivity"
+            android:label="@string/audio_setting_header"
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.CATEGORY_CONTENT_MUSIC" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.sound" />
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/audio_setting_summary" />
+        </activity>
+
     </application>
 </manifest>
