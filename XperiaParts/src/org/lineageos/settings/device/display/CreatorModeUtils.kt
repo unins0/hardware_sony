@@ -38,6 +38,12 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     fun initialize() {
         Log.e(TAG, "Creator Mode controller setup")
 
+        if (!isEnabled) {
+            semcDisplayService.set_sspp_color_mode(1)
+            colorDisplayManager.setColorMode(3)
+            semcDisplayService.set_color_mode(1)
+        }
+
         // Register itself as callback for HIDL
         semcDisplayService.registerCallback(this)
         semcDisplayService.setup()
