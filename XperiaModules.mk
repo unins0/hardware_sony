@@ -39,12 +39,8 @@ ifeq ($(TARGET_SUPPORTS_HIGH_REFRESH_RATE),true)
 endif
 
 ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
-	PRODUCT_PACKAGES += XperiaAudioDolby
-endif
-
-ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT_DTS),true)
 	PRODUCT_PACKAGES += \
-	XperiaAudioDTS \
+	XperiaAudio \
 	XperiaTSRA
 endif
 
