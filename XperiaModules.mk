@@ -49,7 +49,6 @@ ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT_DTS),true)
 endif
 
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
-include hardware/sony/sepolicy/qti/SEPolicy.mk
 	PRODUCT_PACKAGES += XperiaCharger
 include hardware/sony/XperiaModules/XperiaCharger/sepolicy/qti/SEPolicy.mk
 endif
