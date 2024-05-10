@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 XperiaLabs Project
+ * Copyright (C) 2024 XperiaLabs Project
  * Copyright (C) 2023 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -20,7 +20,7 @@ class AudioSettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenc
         yourPreference?.onPreferenceChangeListener = this
     }
 
-    override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
+    override fun onPreferenceChange(preference: Preference, newValue: Any): Boolean {
         return true
     }
 }
