@@ -16,7 +16,7 @@ class AudioSettingsActivity : CollapsingToolbarBaseActivity() {
         super.onCreate(savedInstanceState)
         val fragmentManager: FragmentManager = supportFragmentManager
         fragmentManager.beginTransaction()
-            .replace(R.id.content_frame, AudioSettingsFragment(), TAG)
+            .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, AudioSettingsFragment(), TAG)
             .commit()
     }
 

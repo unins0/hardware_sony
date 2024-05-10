@@ -13,10 +13,11 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Switch
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
 import androidx.preference.*
 import com.android.settingslib.widget.MainSwitchPreference
-import com.android.settingslib.widget.OnMainSwitchChangeListener
 
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -32,7 +33,7 @@ const val CHARGER_CHARGING_LIMIT_KEY = "device_charging_control"
 const val CHARGER_CHARGING_LIMIT_BACKUP = "device_charging_control_backup"
 
 class ChargerSettingsFragment : PreferenceFragmentCompat(),
-    Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {
+    Preference.OnPreferenceChangeListener, OnCheckedChangeListener {
 
     private lateinit var chargerUtils: ChargerUtils
 
@@ -76,7 +77,7 @@ class ChargerSettingsFragment : PreferenceFragmentCompat(),
         return true
     }
 
-    override fun onSwitchChanged(switchView: Switch, isChecked: Boolean) {
+    override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
         mSwitch!!.setChecked(isChecked)
 
         val sharedPreferences: SharedPreferences = 
