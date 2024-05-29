@@ -28,8 +28,15 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     private val colorDisplayManager: ColorDisplayManager =
             context.getSystemService(ColorDisplayManager::class.java)
                     ?: throw Exception("Display manager is NULL")
-    private val semcDisplayService: IDisplay =
-            IDisplay.getService() ?: throw Exception("SEMC Display HIDL not found")
+    private val semcDisplayService: IDisplay by lazy {
+        val service = IDisplay.getService() ?: throw Exception("SEMC Display HIDL not found")
+
+        // Register itself as callback for HIDL
+        service.registerCallback(this)
+
+        service.setup()
+        service
+    }
 
     /**
      * Color transform level used by Creator Mode
@@ -59,9 +66,6 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
             colorDisplayManager.setColorMode(3)
             semcDisplayService.set_color_mode(1)
         }
-
-        semcDisplayService.registerCallback(this)
-        semcDisplayService.setup()
     }
 
     override fun onWhiteBalanceMatrixChanged(matrix: PccMatrix) {
