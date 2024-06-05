@@ -17,6 +17,7 @@
 # Flags
 TARGET_SUPPORTS_CREATOR_MODE ?= true
 TARGET_SUPPORTS_HIGH_REFRESH_RATE ?= true
+TARGET_SUPPORTS_HIGH_POLLING_RATE ?= true
 TARGET_SUPPORTS_SOUND_ENHANCEMENT ?= true
 TARGET_SUPPORTS_SOUND_ENHANCEMENT_DTS ?= true
 TARGET_SUPPORTS_EUICC ?= true
@@ -35,6 +36,13 @@ endif
 
 ifeq ($(TARGET_SUPPORTS_HIGH_REFRESH_RATE),true)
 	PRODUCT_PACKAGES += XperiaSwitcher
+endif
+
+ifeq ($(TARGET_SUPPORTS_HIGH_POLLING_RATE),true)
+include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
+	PRODUCT_PACKAGES += \
+	XperiaTouch \
+	XperiaTouchOverlay
 endif
 
 ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
