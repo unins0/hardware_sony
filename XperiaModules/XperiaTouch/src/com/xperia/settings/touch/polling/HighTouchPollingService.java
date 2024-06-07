@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.settings.touch;
+package com.xperia.settings.touch.polling;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -111,8 +111,8 @@ public class HighTouchPollingService extends Service {
     }
 
     public static void startService(Context context) {
-        context.startServiceAsUser(
-            new Intent(context, HighTouchPollingService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(new Intent(context, HighTouchPollingService.class),
+                UserHandle.CURRENT);
     }
 
     private void updateTouchPollingState(boolean readSetting) {
