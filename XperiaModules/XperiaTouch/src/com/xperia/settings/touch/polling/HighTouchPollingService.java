@@ -18,10 +18,9 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.os.UserHandle;
 import android.provider.Settings;
-
 import android.util.Log;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class HighTouchPollingService extends Service {
@@ -36,7 +35,6 @@ public class HighTouchPollingService extends Service {
     private boolean mScreenOn = true;
     private PowerManager mPowerManager;
     private boolean isPowerSaveCached = false;
-    private BufferedWriter touchNodeWriter = null;
 
     private final ContentObserver mSettingObserver = new ContentObserver(new Handler()) {
         @Override
@@ -77,11 +75,6 @@ public class HighTouchPollingService extends Service {
         filter.addAction(PowerManager.ACTION_POWER_SAVE_MODE_CHANGED);
         registerReceiver(mIntentReceiver, filter);
         isPowerSaveCached = mPowerManager.isPowerSaveMode();
-        try {
-            touchNodeWriter = new BufferedWriter(new FileWriter(TS_NODE));
-        } catch (IOException e) {
-            Log.e(TAG, "Error opening touch node for writing", e);
-        }
         updateTouchPollingState(true);
     }
 
@@ -95,13 +88,6 @@ public class HighTouchPollingService extends Service {
     public void onDestroy() {
         getContentResolver().unregisterContentObserver(mSettingObserver);
         unregisterReceiver(mIntentReceiver);
-        if (touchNodeWriter != null) {
-            try {
-                touchNodeWriter.close();
-            } catch (IOException e) {
-                Log.e(TAG, "Error closing touch node", e);
-            }
-        }
         super.onDestroy();
     }
 
@@ -119,19 +105,17 @@ public class HighTouchPollingService extends Service {
         if (readSetting) {
             mEnabled = Settings.Secure.getInt(getContentResolver(), SETTING_KEY, 0) == 1;
         }
-        if (touchNodeWriter != null) {
-            try {
-                String valueToWrite;
-                if (mScreenOn && mEnabled && !isPowerSaveCached) {
-                    valueToWrite = SET_REPORT_RATE_CMD + HIGH_POLLING_RATE;
-                } else {
-                    valueToWrite = SET_REPORT_RATE_CMD + LOW_POLLING_RATE;
-                }
-                touchNodeWriter.write(valueToWrite);
-                touchNodeWriter.flush();
-            } catch (IOException e) {
-                Log.e(TAG, "Error writing to touch node", e);
+        try (FileOutputStream fos = new FileOutputStream(TS_NODE)) {
+            String valueToWrite;
+            if (mScreenOn && mEnabled && !isPowerSaveCached) {
+                valueToWrite = SET_REPORT_RATE_CMD + HIGH_POLLING_RATE;
+            } else {
+                valueToWrite = SET_REPORT_RATE_CMD + LOW_POLLING_RATE;
             }
+            fos.write(valueToWrite.getBytes());
+            fos.flush();
+        } catch (IOException e) {
+            Log.e(TAG, "Error writing to touch node", e);
         }
     }
 }
