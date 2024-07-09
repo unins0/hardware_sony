@@ -10,6 +10,7 @@ type nvconfig_file_type, file_type, data_file_type;
 type startupprober_file, file_type;
 type sysfs_battchg_ext, fs_type, sysfs_type;
 type sysfs_camera, fs_type, sysfs_type;
+type sysfs_discard_max_bytes, fs_type, sysfs_type;
 type sysfs_dp, fs_type, sysfs_type;
 type sysfs_sects, fs_type, sysfs_type;
 type sysfs_tof_rgbcir, fs_type, sysfs_type;
