@@ -25,7 +25,7 @@ import java.io.IOException;
 
 public class HighTouchPollingService extends Service {
     private static final String TAG = "HighTouchPollingService";
-    private static final String SETTING_KEY = "touch_polling_enabled";
+    private static final String SETTING_KEY = Settings.Secure.TOUCH_SENSITIVITY_ENABLED;
     private static final String TS_NODE = "/sys/devices/virtual/sec/tsp/cmd";
     private static final String SET_REPORT_RATE_CMD = "doze_mode_change,";
     private static final String HIGH_POLLING_RATE = "2";
