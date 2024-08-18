@@ -1,1 +1,4 @@
 sony.screen_brightness    u:object_r:display_brightness_prop:s0
+
+# PIHooks
+persist.sys.pihooks.disable.            u:object_r:pih_disable_prop:s0
