@@ -93,3 +93,7 @@ genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-
 # UIM control node
 genfscon sysfs /class/sony_ext_uim_ctrl u:object_r:sysfs_uim_ctrl:s0
 genfscon sysfs /devices/virtual/sony_ext_uim_ctrl/device/ u:object_r:sysfs_uim_ctrl:s0
+
+# KGSL
+genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_available_frequencies u:object_r:vendor_sysfs_kgsl:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state u:object_r:vendor_sysfs_kgsl:s0
