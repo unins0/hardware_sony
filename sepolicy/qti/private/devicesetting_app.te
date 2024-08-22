@@ -9,7 +9,6 @@ allow devicesetting_app {
     content_capture_service
     game_service
     gpu_service
-    lineage_livedisplay_service
     netstats_service
     surfaceflinger_service
     virtual_device_service
