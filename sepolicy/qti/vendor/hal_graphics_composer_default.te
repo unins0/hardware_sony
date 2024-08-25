@@ -9,3 +9,5 @@ get_prop(hal_graphics_composer_default, vendor_somc_gfx_prop)
 set_prop(hal_graphics_composer_default, vendor_display_always_on_prop)
 set_prop(hal_graphics_composer_default, vendor_display_color_prop)
 set_prop(hal_graphics_composer_default, vendor_display_prop)
+
+dontaudit hal_graphics_composer_default vendor_diag_device:chr_file rw_file_perms;

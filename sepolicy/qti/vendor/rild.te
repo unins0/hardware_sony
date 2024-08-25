@@ -8,3 +8,5 @@ binder_call(rild, vendor_hal_secd_default)
 allow rild vendor_hal_secd_hwservice:hwservice_manager find;
 
 get_prop(rild, vendor_pd_locater_dbg_prop)
+
+dontaudit rild vendor_diag_device:chr_file rw_file_perms;
