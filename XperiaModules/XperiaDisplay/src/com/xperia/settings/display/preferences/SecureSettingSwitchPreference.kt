@@ -21,9 +21,9 @@ import android.content.Context
 import android.provider.Settings
 import android.os.UserHandle
 import android.util.AttributeSet
-import androidx.preference.SwitchPreferenceCompat
+import androidx.preference.SwitchPreference
 
-class SecureSettingSwitchPreference : SwitchPreferenceCompat {
+class SecureSettingSwitchPreference : SwitchPreference {
 
    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
