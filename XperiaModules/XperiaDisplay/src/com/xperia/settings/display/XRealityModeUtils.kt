@@ -6,35 +6,99 @@
 
 package com.xperia.settings.display
 
+import android.app.Activity
+import android.app.ActivityTaskManager
 import android.content.Context
+import android.os.RemoteException
+import android.provider.Settings
+import android.util.Log
+import android.view.View
+
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
+import androidx.core.content.ContextCompat
+import android.hardware.display.ColorDisplayManager
+
+import vendor.semc.hardware.display.V2_0.IDisplay
+import vendor.semc.hardware.display.V2_0.IDisplayCallback
 import vendor.semc.hardware.display.V2_0.PccMatrix
 
-class XRealityModeUtils(context: Context) : DisplayEngine(context) {
-    override val modeEnableSetting: String
-        get() = XREALITY_MODE_ENABLE
+class XRealityModeUtils(private val context: Context) : IDisplayCallback.Stub() {
+    private val colorDisplayManager: ColorDisplayManager =
+            context.getSystemService(ColorDisplayManager::class.java)
+                    ?: throw Exception("Display manager is NULL")
+    private val semcDisplayService: IDisplay by lazy {
+        val service = IDisplay.getService() ?: throw Exception("SEMC Display HIDL not found")
 
-    override val enabledColorMode: Int
-        get() = 1
+        service.registerCallback(this)
 
-    override val disabledColorMode: Int
-        get() = 3
+        service.setup()
+        service
+    }
 
-    override val enabledSsspColorMode: Int
-        get() = 2
+    val isEnabled: Boolean
+        get() = Settings.Secure.getInt(context.contentResolver, XREALITY_MODE_ENABLE, 0) != 0
 
-    override val disabledSsspColorMode: Int
-        get() = 1
+    fun setMode(enabled: Boolean) {
+        semcDisplayService.set_sspp_color_mode(if (enabled) 2 else 1)
+        colorDisplayManager.setColorMode(if (enabled) 1 else 3)
+        semcDisplayService.set_color_mode(if (enabled) 2 else 1)
 
-    override fun getMatrixArray(matrix: PccMatrix): FloatArray {
-        return floatArrayOf(
-            matrix.red * 1.0f, matrix.green * 0.9f, matrix.blue * 0.9f, 0f, 0f,
-            matrix.red * 0.9f, matrix.green * 1.0f, matrix.blue * 0.9f, 0f, 0f,
-            matrix.red * 0.9f, matrix.green * 0.9f, matrix.blue * 1.0f, 0f, 0f,
-            0f, 0f, 0f, 1f, 0f
-        )
+        Settings.Secure.putInt(context.contentResolver, XREALITY_MODE_ENABLE, if (enabled) 1 else 0)
+    }
+
+    fun initialize() {
+        Log.e(TAG, "XReality Mode controller setup")
+
+        if (isEnabled) {
+            setMode(true)
+        }
+    }
+
+    override fun onWhiteBalanceMatrixChanged(matrix: PccMatrix) {
+        val r = matrix.red
+        val g = matrix.green
+        val b = matrix.blue
+        val saturationAdjustment = 2f
+        val brightnessAdjustment = 0.1f
+
+        val adjustedRed = (saturationAdjustment * r).coerceIn(0f, 1f)
+        val adjustedGreen = (saturationAdjustment * g).coerceIn(0f, 1f)
+        val adjustedBlue = (saturationAdjustment * b).coerceIn(0f, 1f)
+        
+    try {
+        val saturationAdjustment = 1.5f
+        val brightnessAdjustment = 0.9f
+
+        val adjustedRed = (saturationAdjustment * r).coerceIn(0f, 1f)
+        val adjustedGreen = (saturationAdjustment * g).coerceIn(0f, 1f)
+        val adjustedBlue = (saturationAdjustment * b).coerceIn(0f, 1f)
+
+        val colorMatrix: ColorMatrix = ColorMatrix().apply {
+            set(floatArrayOf(
+                adjustedRed, 0f, 0f, 0f, brightnessAdjustment * 255, // Red
+                0f, adjustedGreen, 0f, 0f, brightnessAdjustment * 255, // Green
+                0f, 0f, adjustedBlue, 0f, brightnessAdjustment * 255, // Blue
+                0f, 0f, 0f, 1f, 0f // Alpha
+            ))
+        }
+
+            updateConfiguration()
+        } catch (e: Exception) {
+            Log.e(TAG, "Could not apply setColorMatrix", e)
+        }
+    }
+
+    fun updateConfiguration() {
+        try {
+            ActivityTaskManager.getService().updateConfiguration(null)
+        } catch (e: RemoteException) {
+            Log.e(TAG, "Could not update configuration", e)
+        }
     }
 
     companion object {
+        private const val TAG = "XRealityUtils"
         private const val XREALITY_MODE_ENABLE = "xr_enable"
     }
 }

@@ -7,7 +7,7 @@
 package com.xperia.settings.display
 
 import android.os.Bundle
- 
+
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.R
 

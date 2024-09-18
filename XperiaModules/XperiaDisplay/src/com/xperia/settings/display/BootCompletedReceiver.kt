@@ -11,7 +11,6 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-import com.xperia.settings.display.DisplayEngine
 import com.xperia.settings.display.CreatorModeUtils
 import com.xperia.settings.display.XRealityModeUtils
 
