@@ -47,7 +47,7 @@ endif
 
 ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
 	PRODUCT_PACKAGES += \
-	XperiaAudioAddOn
+	XperiaAudio
 endif
 
 ifeq ($(TARGET_SUPPORTS_EUICC),true)
