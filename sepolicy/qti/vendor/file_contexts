@@ -47,9 +47,6 @@
 # Fingerprint devices
 /dev/esfp0    u:object_r:etsd_device:s0
 
-# mmc device type
-/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc0/mmc0:[a-f0-9]+/type               u:object_r:vendor_sysfs_mmc_device_type:s0
-
 # Sony camera devices
 /dev/camera_sync         u:object_r:hal_camera_sync:s0
 /dev/sony_camera[0-9]    u:object_r:sony_camera_device:s0

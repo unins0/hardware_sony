@@ -27,5 +27,4 @@
 recovery_only(`
 allow recovery exfat:dir r_dir_perms;
 allow recovery exfat:file r_file_perms;
-allow recovery vendor_sysfs_mmc_device_type:file r_file_perms;
 ')
