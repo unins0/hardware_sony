@@ -1,2 +1,5 @@
 # Allow KProfiles to be adjusted by a system app
 allow system_app sysfs_kprofiles:file rw_file_perms;
+
+# Sony charging hal
+binder_call(system_app, hal_sony_charger_default)
