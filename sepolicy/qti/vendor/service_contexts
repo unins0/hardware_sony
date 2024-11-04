@@ -7,4 +7,3 @@ vendor.somc.hardware.aidlmiscta.IMisctaGlobal/default              u:object_r:ve
 vendor.somc.hardware.aidlradio.ISomcHook/somchook0                 u:object_r:somc_aidl_radio_service:s0
 vendor.somc.hardware.aidlradio.ISomcHook/somchook1                 u:object_r:somc_aidl_radio_service:s0
 vendor.somc.hardware.videoeffect.IAidlSwiqi/default                u:object_r:hal_swiqi_service:s0
-vendor.sony.charger.ICharger/default                               u:object_r:hal_sony_charger_service:s0

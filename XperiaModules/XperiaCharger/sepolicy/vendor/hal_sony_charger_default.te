@@ -13,4 +13,4 @@ allow hal_sony_charger_default hal_sony_charger_default:netlink_kobject_uevent_s
 allow hal_sony_charger_default sysfs_battchg_ext:file { getattr rw_file_perms };
 allow hal_sony_charger_default sysfs_battchg_ext:dir r_dir_perms;
 
-permissive hal_sony_charger_default;
+dontaudit hal_sony_charger_default hal_sony_charger_default:capability { dac_override };

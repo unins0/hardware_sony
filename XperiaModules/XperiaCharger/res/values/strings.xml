@@ -29,4 +29,7 @@
 
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">Pause Charging</string>
+
+    <!-- PlaceHolder -->
+    <string name="custom_seekbar_default_value_to_set" translatable="false"></string>
 </resources>
