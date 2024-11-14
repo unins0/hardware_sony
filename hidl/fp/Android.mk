@@ -2,6 +2,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.sony
+
+LOCAL_HEADER_LIBRARIES := \
+    generated_kernel_includes
+
 LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.1-service.sony.rc
 LOCAL_VINTF_FRAGMENTS := android.hardware.biometrics.fingerprint@2.1-service.sony.xml
 LOCAL_PROPRIETARY_MODULE := true
@@ -26,11 +30,6 @@ LOCAL_SHARED_LIBRARIES := \
     libhidlbase \
     liblog \
     libutils
-
-ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-endif
 
 ifneq ($(HAS_FPC),true)
 # This file heavily depends on fpc_ implementations from the
