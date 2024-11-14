@@ -32,6 +32,13 @@ LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 endif
 
+ifneq ($(HAS_FPC),true)
+# This file heavily depends on fpc_ implementations from the
+# above fpc_imp_* files. There is no sensible default file
+# on some platforms, so just remove the file altogether:
+LOCAL_SRC_FILES -= BiometricsFingerprint.cpp
+endif
+
 LOCAL_CFLAGS += \
     -DPLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION) \
     -fexceptions
