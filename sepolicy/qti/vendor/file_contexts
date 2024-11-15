@@ -22,6 +22,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.nxp                                           u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.sony                                u:object_r:hal_lineage_powershare_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs    u:object_r:hal_fingerprint_default_exec:s0
+/(system/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.sony                 u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service(.*)?                         u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.vibrator-sony\.service\.cs40l25             u:object_r:hal_vibrator_default_exec:s0
@@ -46,6 +47,7 @@
 
 # Fingerprint devices
 /dev/esfp0    u:object_r:etsd_device:s0
+/dev/fingerprint        u:object_r:etsd_device:s0
 
 # Sony camera devices
 /dev/camera_sync         u:object_r:hal_camera_sync:s0
