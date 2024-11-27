@@ -32,7 +32,7 @@
                 android:targetClass="com.asus.maxxaudio.audiowizard.MainActivity" />
         </Preference -->
 
-        <!-- Preference
+        <Preference
             android:key="audio_threesixtyupmix"
             android:icon="@drawable/ic_threesixtyupmix"
             android:title="@string/threesixtyupmix_title"
@@ -41,7 +41,7 @@
             <intent
                 android:targetPackage="jp.co.sony.threesixtyra.settings"
                 android:targetClass="jp.co.sony.threesixtyra.settings.settingsmenu.SettingsMenuActivity" />
-        </Preference -->
+        </Preference>
 
         <Preference
             android:key="audio_effectpriority"
