@@ -1,0 +1,5 @@
+binder_call(vendor_hal_somc_charger_client, vendor_hal_somc_charger_server)
+binder_call(vendor_hal_somc_charger_server, vendor_hal_somc_charger_client)
+
+add_hwservice(vendor_hal_somc_charger_server, vendor_hal_somc_charger_hwservice)
+allow vendor_hal_somc_charger_client vendor_hal_somc_charger_hwservice:hwservice_manager find;
