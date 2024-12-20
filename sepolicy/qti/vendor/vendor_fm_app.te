@@ -1,0 +1,6 @@
+allow vendor_fm_app property_socket:sock_file write;
+get_prop(vendor_fm_app, vendor_fm_prop)
+
+allow vendor_fm_app vendor_fm_radio_device:chr_file r_file_perms;
+
+allow vendor_fm_app init:unix_stream_socket connectto;

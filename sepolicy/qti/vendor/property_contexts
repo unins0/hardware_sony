@@ -21,3 +21,5 @@ vendor.secd.wakeup                             u:object_r:vendor_sdm_prop:s0
 vendor.smartstamina.touchreport                u:object_r:vendor_hal_superstamina_prop:s0
 vendor.splitscreen.pip.mode                    u:object_r:vendor_somc_gfx_prop:s0
 persist.vendor.battery.smt_chg                 u:object_r:vendor_hal_somc_charger_prop:s0
+ro.vendor.fm.                                  u:object_r:vendor_fm_prop:s0
+ro.vendor.builtin_fm_antenna_support           u:object_r:vendor_fm_prop:s0
