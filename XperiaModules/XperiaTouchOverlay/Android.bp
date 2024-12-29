@@ -15,5 +15,6 @@
 
 runtime_resource_overlay {
     name: "XperiaTouchOverlay",
+    sdk_version: "current",
     vendor: true,
 }
