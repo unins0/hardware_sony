@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Ustawienia Jakości Obrazu</string>
+    <string name="display_setting_summary">Dostosuj jakość obrazu w trybie twórcy</string>
     <string name="display_cm_header">Gama Kolorów i Kontrast</string>
     <string name="display_cm_enable">Tryb Twórcy</string>
     <string name="display_cm_summary">Zapewnia wierne odwzorowanie zamierzonej wizji twórcy dzięki wyświetlaczowi o wysokiej rozdzielczości i specjalnie opracowanemu przetwarzaniu obrazu zgodnemu z gamą kolorów BT.2020 i 10-bitową specyfikacją HDR.</string>

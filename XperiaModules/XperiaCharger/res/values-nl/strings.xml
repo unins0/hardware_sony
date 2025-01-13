@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Batterijverzorging</string>
+    <string name="charger_settings_summary">Configureer opties voor batterijonderhoud</string>
     <string name="charger_setting_main_enable_title">Gebruik Batterijonderhoud</string>
     <string name="device_charging_enable_title">Pauzeer het Opladen</string>
     <string name="device_charging_enable_summary">Als je Onderbrekend opladen uitschakelt, worden de telefoonsystemen rechtstreeks van stroom voorzien in plaats van dat de batterij wordt opgeladen.\nDit vermindert de thermische belasting, waardoor de gameprestaties behouden blijven en je batterij langer gezond blijft.</string>

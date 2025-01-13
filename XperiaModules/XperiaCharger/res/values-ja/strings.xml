@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">バッテリーのケア</string>
+    <string name="charger_settings_summary">バッテリーケアのオプションを構成する</string>
     <string name="charger_setting_main_enable_title">バッテリーケアを使用する</string>
     <string name="device_charging_enable_title">充電を一時停止する</string>
     <string name="device_charging_enable_summary">充電の一時停止をオフにすると、バッテリーを充電するのではなく、電話システムに直接電力が供給されます。\nこれにより熱ストレスが軽減され、ゲームのパフォーマンスを維持し、バッテリーをより長く健全に保つことができます。</string>

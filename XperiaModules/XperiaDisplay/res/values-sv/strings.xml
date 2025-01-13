@@ -21,6 +21,7 @@
 
     <!-- Display Settings --> 
     <string name="display_settings_title">Inställningar för Bildkvalitet</string>
+    <string name="display_setting_summary">Justera bildkvaliteten med skaparläget</string>
     <string name="display_cm_header">Färgomfång och Kontrast</string>
     <string name="display_cm_enable">Skaparläge</string>
     <string name="display_cm_summary">Ge en trogen återgivning av skaparens avsedda vision genom högupplöst display och specialutvecklad bildbehandling som är kompatibel med BT.2020-färgomfånget och 10-bitars färg enligt HDR-specifikationen.</string>

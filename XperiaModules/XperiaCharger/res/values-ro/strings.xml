@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Îngrijirea Bateriei</string>
+    <string name="charger_settings_summary">Configurați opțiunile pentru îngrijirea bateriei</string>
     <string name="charger_setting_main_enable_title">Utilizați Îngrijirea Bateriei</string>
     <string name="device_charging_enable_title">Oprirea Încărcării</string>
     <string name="device_charging_enable_summary">Deactivarea opțiunii „Oprirea Încărcării“ ,v-a redirecționa puterea de la încărcator la sistemele telefonului care vor alimentate direct, iar încărcarea bateriei v-a fi oprită.\nAcestă opțiune reduce stresul termic, ajutând la menținerea performanței în jocuri și la menținerea bateriei pe un termen lung.</string>

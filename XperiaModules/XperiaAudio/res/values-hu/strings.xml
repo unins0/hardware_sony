@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">Hangbeállítások</string>
     <string name="audio_menu_header">Hangminőség</string>
+    <string name="audio_setting_summary">Javítsa hangminőségét a Dolby Sound EQ-val a figyelemre méltó és magával ragadó hanglejátszási élmény érdekében</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Módosítsa a Dolby Sound beállításait, hogy magával ragadó, többdimenziós hangzást tapasztaljon, amely magával ragad, életre keltve a filmeket, zenét és játékokat.</string>
     <string name="dtsx_title">DTS:X Ultra</string>

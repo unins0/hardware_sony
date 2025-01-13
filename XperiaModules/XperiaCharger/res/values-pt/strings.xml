@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Gerir Carga de Bateria</string>
+    <string name="charger_settings_summary">Configurar opções para cuidados com a bateria</string>
     <string name="charger_setting_main_enable_title">Usar Gerir Carga de Bateria</string>
     <string name="device_charging_enable_title">Pausar Carga</string>
     <string name="device_charging_enable_summary">Desativar a pausa de carregamento alimentará os sistemas telefônicos diretamente, em vez de carregar a bateria.\nIsso reduz o estresse térmico, ajudando a manter o desempenho dos jogos e a manter a bateria saudável por mais tempo.</string>

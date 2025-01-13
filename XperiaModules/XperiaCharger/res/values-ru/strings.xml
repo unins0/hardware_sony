@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Уход за аккумулятором</string>
+    <string name="charger_settings_summary">Настройка параметров ухода за аккумулятором</string>
     <string name="charger_setting_main_enable_title">Используйте уход за аккумулятором</string>
     <string name="device_charging_enable_title">Пауза зарядки</string>
     <string name="device_charging_enable_summary">Отключение функции «Пауза зарядки» обеспечит питание телефонных систем напрямую, а не зарядку аккумулятора.\nЭто снижает термическую нагрузку, помогает поддерживать производительность в играх и дольше сохранять работоспособность аккумулятора.</string>

@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">音频设置</string>
     <string name="audio_menu_header">音质</string>
+    <string name="audio_setting_summary">通过 Dolby Sound EQ 提升音质，带来非凡的沉浸式音频播放体验</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">调整杜比音效 (Dolby Sound) 设置，体验身临其境的多维声音，让电影、音乐和游戏栩栩如生</string>
     <string name="dtsx_title">DTS:X Ultra</string>

@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">การดูแลแบตเตอรี่</string>
+    <string name="charger_settings_summary">กำหนดค่าตัวเลือกสำหรับการดูแลรักษาแบตเตอรี่</string>
     <string name="charger_setting_main_enable_title">ใช้การดูแลแบตเตอรี่</string>
     <string name="device_charging_enable_title">หยุดการชาร์จชั่วคราว</string>
     <string name="device_charging_enable_summary">การปิดการชาร์จชั่วคราวจะเป็นการจ่ายไฟให้ระบบโทรศัพท์โดยตรงแทนที่จะชาร์จแบตเตอรี่\nซึ่งจะช่วยลดความเครียดจากความร้อน ช่วยรักษาประสิทธิภาพการเล่นเกมและรักษาแบตเตอรี่ให้แข็งแรงได้นานขึ้น.</string>

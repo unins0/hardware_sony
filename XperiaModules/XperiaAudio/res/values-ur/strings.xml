@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">آڈیو کی ترتیبات</string>
     <string name="audio_menu_header">آواز کا معیار</string>
+    <string name="audio_setting_summary">ایک قابل ذکر اور عمیق آڈیو پلے بیک کے تجربے کے لیے Dolby Sound EQ کے ساتھ اپنی آواز کے معیار کو بلند کریں۔</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">ڈولبی ساؤنڈ سیٹنگز کو ایڈجسٹ کریں تاکہ عمیق، کثیر جہتی آواز کا تجربہ کریں جو آپ کو اپنے لپیٹ میں لے لے، فلموں، موسیقی اور گیمز کو زندہ کرے</string>
     <string name="dtsx_title">DTS:X Ultra</string>

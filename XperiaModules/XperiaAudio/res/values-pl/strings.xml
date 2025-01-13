@@ -21,6 +21,7 @@
 
     <!-- Audio Settings -->
     <string name="audio_menu_title">Ustawienia Dźwięku</string>
+    <string name="audio_setting_summary">Podnieś jakość dźwięku dzięki Dolby Sound EQ, aby uzyskać niezwykłe i wciągające wrażenia z odtwarzania dźwięku</string>
     <string name="audio_menu_header">Jakość Dźwięku</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Dostosuj ustawienia Dolby Sound, aby doświadczyć wciągającego, wielowymiarowego dźwięku, który Cię otacza, ożywiając filmy, muzykę i gry</string>

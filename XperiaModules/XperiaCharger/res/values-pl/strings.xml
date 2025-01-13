@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Pielęgnacja Baterii</string>
+    <string name="charger_settings_summary">Skonfiguruj opcje konserwacji baterii</string>
     <string name="charger_setting_main_enable_title">Użyj funkcji Ochrona Baterii</string>
     <string name="device_charging_enable_title">Wstrzymaj Ładowanie</string>
     <string name="device_charging_enable_summary">Wyłączenie opcji Wstrzymaj ładowanie spowoduje bezpośrednie zasilanie systemów telefonicznych, a nie ładowanie baterii.\nDzięki temu zmniejsza się obciążenie termiczne, pomagając utrzymać wydajność w grach i zapewnić dłuższy czas pracy baterii.</string>

@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">배터리 관리</string>
+    <string name="charger_settings_summary">배터리 관리 옵션 구성</string>
     <string name="charger_setting_main_enable_title">배터리 관리 사용</string>
     <string name="device_charging_enable_title">충전 일시 중지</string>
     <string name="device_charging_enable_summary">충전 일시 중지를 끄면 배터리를 충전하는 대신 전화 시스템에 직접 전원을 공급합니다.n\이는 열 스트레스를 줄여 게임 성능을 유지하고 배터리를 더 오랫동안 건강하게 유지하는 데 도움이 됩니다.</string>

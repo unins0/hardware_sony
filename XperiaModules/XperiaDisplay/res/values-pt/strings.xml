@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Definições de Qualidade de Imagem</string>
+    <string name="display_setting_summary">Ajuste a qualidade da imagem usando o modo criador</string>
     <string name="display_cm_header">Gama de Cores e Contraste</string>
     <string name="display_cm_enable">Modo de Criador</string>
     <string name="display_cm_summary">Forneça uma reprodução fiel da visão pretendida pelo criador através do ecrã de alta definição e do processamento de imagens especialmente desenvolvido compatível com a gama de cores do BT.2020 e a cor de 10 bits da especificação HDR.</string>
