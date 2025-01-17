@@ -44,5 +44,7 @@
                        android:value="com.android.settings.category.ia.sound" />
         </activity>
 
+        <service
+            android:name="com.xperia.settings.haptics.volsync.VolumeListenerService" />
     </application>
 </manifest>
