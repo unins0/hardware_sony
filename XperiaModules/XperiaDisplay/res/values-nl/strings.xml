@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Instellingen voor Beeldkwaliteit</string>
+    <string name="display_setting_summary">Pas de beeldkwaliteit aan met Creator Mode</string>
     <string name="display_cm_header">Kleurengamma en Contrast</string>
     <string name="display_cm_enable">Creator Modus</string>
     <string name="display_cm_summary">Zorg voor een getrouwe reproductie van de beoogde visie van de maker via high-definition weergave en speciaal ontwikkelde beeldverwerking die compatibel is met het BT.2020-kleurengamma en 10-bit kleur van HDR-specificatie.</string>

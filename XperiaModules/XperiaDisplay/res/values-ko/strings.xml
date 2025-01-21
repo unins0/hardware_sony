@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">이미지 품질 설정</string>
+    <string name="display_setting_summary">크리에이터 모드를 사용하여 이미지 품질 조정</string>
     <string name="display_cm_enable">크리에이터 모드</string>
     <string name="display_cm_header">색 영역 및 대비</string>
     <string name="display_cm_summary">BT.2020 색영역 및 HDR 사양의 10비트 컬러와 호환되는 고해상도 디스플레이 및 특별히 개발된 이미지 처리를 통해 창조자의 의도한 비전을 충실히 재현합니다.</string>

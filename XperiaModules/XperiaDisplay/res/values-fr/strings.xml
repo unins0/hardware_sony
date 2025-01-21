@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Paramètres de Qualité d\'Image</string>
+    <string name="display_setting_summary">Ajuster la qualité de l\'image à l\'aide du mode créateur</string>
     <string name="display_cm_header">Gamme de Couleurs et Contraste</string>
     <string name="display_cm_enable">Mode Créateur</string>
     <string name="display_cm_summary">Fournit une reproduction fidèle de la vision prévue du créateur grâce à un affichage haute définition et un traitement d\'image spécialement développé compatible avec la gamme de couleurs BT.2020 et les couleurs 10 bits de la spécification HDR.</string>

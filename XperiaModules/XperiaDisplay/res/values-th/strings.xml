@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">การตั้งค่าคุณภาพของภาพ</string>
+    <string name="display_setting_summary">ปรับคุณภาพของภาพโดยใช้โหมดผู้สร้าง</string>
     <string name="display_cm_header">ขอบเขตสีและคอนทราสต์</string>
     <string name="display_cm_enable">โหมดผู้สร้าง</string>
     <string name="display_cm_summary">มอบการสร้างวิสัยทัศน์ที่ผู้สร้างตั้งใจไว้อย่างสมจริงผ่านจอแสดงผลความละเอียดสูงและการประมวลผลภาพที่พัฒนาขึ้นมาเป็นพิเศษซึ่งเข้ากันได้กับขอบเขตสี BT.2020 และข้อกำหนดสี 10 บิตของ HDR</string>

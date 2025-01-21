@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">เอ็กซ์พีเรียออดิโอ</string>
     <string name="audio_menu_header">คุณภาพเสียง</string>
+    <string name="audio_setting_summary">ยกระดับคุณภาพเสียงของคุณด้วย Dolby Sound EQ เพื่อประสบการณ์การเล่นเสียงที่น่าทึ่งและดื่มด่ำ</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">ปรับการตั้งค่าเสียง Dolby เพื่อสัมผัสประสบการณ์เสียงที่ดื่มด่ำและหลากหลายมิติที่ล้อมรอบคุณ ทำให้ภาพยนตร์ เพลง และเกมมีชีวิตชีวา</string>
     <string name="dtsx_title">DTS:X Ultra</string>

@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">オーディオ設定</string>
     <string name="audio_menu_header">音の質</string>
+    <string name="audio_setting_summary">ドルビー サウンド EQ で音質を向上させ、臨場感あふれる素晴らしいオーディオ再生体験を実現します。</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Dolby Sound の設定を調整して、映画、音楽、ゲームに命を吹き込む、包み込まれるような臨場感あふれる多次元サウンドを体験してください。</string>
     <string name="dtsx_title">DTS:X Ultra</string>

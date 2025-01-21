@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">छवि गुणवत्ता सेटिंग्स</string>
+    <string name="display_setting_summary">क्रिएटर मोड का उपयोग करके छवि गुणवत्ता समायोजित करें</string>
     <string name="display_cm_header">रंग सरगम ​​और कंट्रास्ट</string>
     <string name="display_cm_enable">निर्माता मोड</string>
     <string name="display_cm_summary">बीटी.2020 रंग सरगम ​​और एचडीआर विनिर्देश के 10-बिट रंग के साथ संगत उच्च परिभाषा डिस्प्ले और विशेष रूप से विकसित छवि प्रसंस्करण के माध्यम से निर्माता की इच्छित दृष्टि का एक विश्वसनीय पुनरुत्पादन प्रदान करें।.</string>

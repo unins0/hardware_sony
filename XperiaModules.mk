@@ -27,10 +27,12 @@ TARGET_SUPPORTS_EUICC ?= false
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/XperiaModules
 
-# Main Module
-PRODUCT_PACKAGES += XperiaSettings
+# Devices
+ifeq ($(TARGET_SHIPS_SONY_APPS),true)
+        PRODUCT_PACKAGES += XperiaDevices
+endif
 
-# Submodules
+# Battery Care
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
         DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
            hardware/sony/XperiaModules/XperiaCharger/vintf/vendor.sony.charger.device.xml
@@ -41,14 +43,17 @@ ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
                             vendor.sony.charger-service
 endif
 
+# Display Settings
 ifeq ($(TARGET_SUPPORTS_CREATOR_MODE),true)
 	PRODUCT_PACKAGES += XperiaDisplay
 endif
 
+# Refresh Rate
 ifeq ($(TARGET_SUPPORTS_HIGH_REFRESH_RATE),true)
 	PRODUCT_PACKAGES += XperiaSwitcher
 endif
 
+# High Touch Polling Service
 ifeq ($(TARGET_SUPPORTS_HIGH_POLLING_RATE),true)
 include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
 	PRODUCT_PACKAGES += \
@@ -56,11 +61,13 @@ include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
 	XperiaTouchOverlay
 endif
 
+# Audio Settings
 ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
 	PRODUCT_PACKAGES += \
 	XperiaAudio
 endif
 
+# E-Sim
 ifeq ($(TARGET_SUPPORTS_EUICC),true)
 	PRODUCT_PACKAGES += XperiaEuicc
 endif

@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">بیٹری کی دیکھ بھال</string>
+    <string name="charger_settings_summary">بیٹری کی دیکھ بھال کے لیے اختیارات ترتیب دیں۔</string>
     <string name="charger_setting_main_enable_title">بیٹری کیئر کا استعمال کریں۔</string>
     <string name="device_charging_enable_title">چارجنگ موقوف کریں۔</string>
     <string name="device_charging_enable_summary">موقوف چارجنگ کو آف کرنے سے فون کے سسٹمز کو بیٹری چارج کرنے کی بجائے براہ راست طاقت ملے گی۔\nیہ تھرمل تناؤ کو کم کرتا ہے، گیمنگ کی کارکردگی کو برقرار رکھنے اور آپ کی بیٹری کو زیادہ دیر تک صحت مند رکھنے میں مدد کرتا ہے۔</string>

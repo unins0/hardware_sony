@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Setari pentru Calitatea Imaginii</string>
+    <string name="display_setting_summary">Reglați calitatea imaginii utilizând modul creator</string>
     <string name="display_cm_header">Gama de Culori și de Contrast</string>
     <string name="display_cm_enable">Mod Creator</string>
     <string name="display_cm_summary">Oferă o reproducere fidelă a viziunii intenționate a creatorului prin afișaj de înaltă definiție și procesare a imaginii special dezvoltată, care este compatibilă cu gama de culori BT.2020 și culoarea pe 10 biți a specificației HDR.</string>

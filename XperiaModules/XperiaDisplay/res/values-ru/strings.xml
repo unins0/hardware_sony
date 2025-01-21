@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">Настройки качества изображения</string>
+    <string name="display_setting_summary">Настройте качество изображения в режиме создателя</string>
     <string name="display_cm_header">Цветовая гамма и контрастность</string>
     <string name="display_cm_enable">Режим автора</string>
     <string name="display_cm_summary">Обеспечьте точное воспроизведение замысла создателя с помощью дисплея высокой четкости и специально разработанной обработки изображений, совместимой с цветовой гаммой BT.2020 и 10-битным цветом спецификации HDR.</string>

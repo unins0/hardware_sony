@@ -21,6 +21,7 @@
 
     <!-- Display Settings -->
     <string name="display_settings_title">تصویری معیار کی ترتیبات</string>
+    <string name="display_setting_summary">سونی کے تخلیق کار موڈ کا استعمال کرتے ہوئے تصویر کے معیار کو ایڈجسٹ کریں۔</string>
     <string name="display_cm_header">کلر گامٹ اور کنٹراسٹ</string>
     <string name="display_cm_enable">تخلیق کار وضع</string>
     <string name="display_cm_summary">ہائی ڈیفینیشن ڈسپلے اور BT.2020 کلر گامٹ اور HDR تصریح کے 10 بٹ کلر کے ساتھ ہم آہنگ خصوصی طور پر تیار کردہ امیج پروسیسنگ کے ذریعے تخلیق کار کے مطلوبہ وژن کا ایک وفادار پنروتپادن فراہم کریں۔</string>

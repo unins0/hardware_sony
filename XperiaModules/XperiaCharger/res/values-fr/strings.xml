@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Entretien de la Batterie</string>
+    <string name="charger_settings_summary">Configurer les options d'entretien de la batterie</string>
     <string name="charger_setting_main_enable_title">Utiliser l\'entretien de la batterie</string>
     <string name="device_charging_enable_title">Suspendre le Chargement</string>
     <string name="device_charging_enable_summary">La désactivation de la mise en pause de la charge alimentera directement les systèmes du téléphone plutôt que de charger la batterie. Cela réduit le stress thermique, ce qui contribue à maintenir les performances de jeu et à préserver la santé de la batterie sur le long terme.</string>

@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Az Akkumulátor Gondozása</string>
+    <string name="charger_settings_summary">Konfigurálja az akkumulátorkezelési beállításokat</string>
     <string name="charger_setting_main_enable_title">Használja a Az Akkumulátor Gondozása alkalmazást</string>
     <string name="device_charging_enable_title">Töltés Szüneteltetése</string>
     <string name="device_charging_enable_summary">A töltés szüneteltetése kikapcsolja a telefonrendszert közvetlenül, az akkumulátor töltése helyett.\nEz csökkenti a hőterhelést, segít megőrizni a játékteljesítményt, és hosszabb ideig megőrzi az akkumulátor egészségét.</string>

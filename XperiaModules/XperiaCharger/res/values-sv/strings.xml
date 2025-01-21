@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Batterivård</string>
+    <string name="charger_settings_summary">Konfigurera alternativ för batterivård</string>
     <string name="charger_setting_main_enable_title">Använd Batterivård</string>
     <string name="device_charging_enable_title">Pausa Laddning</string>
     <string name="device_charging_enable_summary">Om du stänger av Paus Laddning strömförsörjs telefonsystemen direkt istället för att ladda batteriet.\nDetta minskar termisk stress, hjälper till att bibehålla spelprestanda och hålla batteriet friskt längre.</string>

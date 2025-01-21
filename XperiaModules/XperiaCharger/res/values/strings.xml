@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="charger_settings_title">Battery Care</string>
+    <string name="charger_settings_summary">Configure options for battery care</string>
     <string name="charger_bc_enable">Use Battery Care</string>
     <string name="charger_hs_enable">Pause Charging</string>
     <string name="charger_hs_summary">Turning Pause Charging off will power the phone systems directly rather than charging the battery.\nThis reduces thermal stress, helping to maintain gaming performance and keep your battery healthy for longer.</string>

@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Cuidado de la Batería</string>
+    <string name="charger_settings_summary">Configurar opciones para el cuidado de la batería</string>
     <string name="charger_setting_main_enable_title">Usar Cuidado de la Batería</string>
     <string name="device_charging_enable_title">Pausar Carga</string>
     <string name="device_charging_enable_summary">Desactivar la Carga en Pausa alimentará directamente los sistemas del teléfono en lugar de cargar la batería. Esto reduce el estrés térmico, lo que ayuda a mantener el rendimiento del juego y a preservar la salud de la batería durante más tiempo.</string>

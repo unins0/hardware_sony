@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">电池保养</string>
+    <string name="charger_settings_summary">配置电池保养选项</string>
     <string name="charger_setting_main_enable_title">使用电池保养</string>
     <string name="device_charging_enable_title">暂停充电</string>
     <string name="device_charging_enable_summary">关闭暂停充电功能将直接为手机系统供电，而不是给电池充电。\n这样做可以减少热应力，有助于保持游戏性能并延长电池的使用寿命。</string>

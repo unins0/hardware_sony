@@ -21,6 +21,7 @@
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">Batteriepflege</string>
+    <string name="charger_settings_summary">Konfigurieren Sie Optionen für die Batteriepflege</string>
     <string name="charger_setting_main_enable_title">Verwenden Sie Batteriepflege</string>
     <string name="device_charging_enable_title">Ladevorgang Unterbrechen</string>
     <string name="device_charging_enable_summary">Durch Ausschalten der Pause-Ladefunktion werden die Telefonsysteme direkt mit Strom versorgt, anstatt den Akku aufzuladen.\nDies reduziert die thermische Belastung und trägt dazu bei, die Spieleleistung aufrechtzuerhalten und den Akku länger gesund zu halten.</string>

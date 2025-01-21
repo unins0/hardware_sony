@@ -21,6 +21,7 @@
 
     <!-- Audio Settings -->
     <string name="audio_menu_title">오디오 설정</string>
+    <string name="audio_setting_summary">놀랍고 몰입감 넘치는 오디오 재생 경험을 위해 Dolby Sound EQ로 음질을 향상시키세요.</string>
     <string name="audio_menu_header">소리 품질</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Dolby Sound 설정을 조정하여 영화, 음악, 게임을 생생하게 전달하고 몰입감 넘치는 다차원 사운드를 경험해 보세요.</string>

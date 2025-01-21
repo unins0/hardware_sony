@@ -22,6 +22,7 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">Definições de Áudio</string>
     <string name="audio_menu_header">Qualidade de Áudio</string>
+    <string name="audio_setting_summary">Eleve a qualidade do seu som com o Dolby Sound EQ para uma experiência de reprodução de áudio notável e envolvente</string>
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Ajuste definições de som Dolby para uma experiência de áudio imersiva e multidimensional</string>
     <string name="dtsx_title">DTS:X Ultra</string>
