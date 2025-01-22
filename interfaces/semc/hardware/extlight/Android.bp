@@ -1,0 +1,28 @@
+aidl_interface {
+    name: "vendor.semc.hardware.extlight",
+    vendor_available: true,
+    srcs: ["vendor/semc/hardware/extlight/*.aidl"],
+    stability: "vintf",
+    owner: "lineage",
+
+    imports: [
+        "android.hardware.light-V2",
+    ],
+
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [
+                "android.hardware.light-V2",
+            ],
+        },
+    ],
+}
