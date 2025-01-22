@@ -16,6 +16,7 @@
 
 # Flags
 TARGET_SUPPORTS_CREATOR_MODE ?= false
+TARGET_SUPPORTS_MEDIA_VIBRATION ?= false
 TARGET_SUPPORTS_HIGH_REFRESH_RATE ?= false
 TARGET_SUPPORTS_HIGH_POLLING_RATE ?= false
 TARGET_SUPPORTS_SOUND_ENHANCEMENT ?= false
@@ -43,6 +44,11 @@ endif
 # Display Settings
 ifeq ($(TARGET_SUPPORTS_CREATOR_MODE),true)
 	PRODUCT_PACKAGES += XperiaDisplay
+endif
+
+# Media Vibration
+ifeq ($(TARGET_SUPPORTS_MEDIA_VIBRATION),true)
+        PRODUCT_PACKAGES += XperiaHaptics
 endif
 
 # Refresh Rate
