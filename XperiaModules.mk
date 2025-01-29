@@ -34,13 +34,9 @@ endif
 
 # Battery Care
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
-        DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-           hardware/sony/XperiaModules/XperiaCharger/vintf/vendor.sony.charger.device.xml
-
         BOARD_VENDOR_SEPOLICY_DIRS += hardware/sony/XperiaModules/XperiaCharger/sepolicy/vendor
 
-	PRODUCT_PACKAGES += XperiaCharger \
-                            vendor.sony.charger-service
+	PRODUCT_PACKAGES += XperiaCharger
 endif
 
 # Display Settings

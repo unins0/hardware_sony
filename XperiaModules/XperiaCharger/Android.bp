@@ -1,26 +1,11 @@
-android_app {
-    name: "XperiaCharger",
-    defaults: ["SettingsLibDefaults"],
-
-    srcs: [
-        "src/**/*.java",
-        "src/**/*.kt",
-    ],
-    resource_dirs: ["res"],
-
-    certificate: "platform",
-    platform_apis: true,
-    system_ext_specific: true,
-    privileged: true,
-
-    static_libs: [
-        "androidx.core_core",
-        "androidx.preference_preference",
-        "androidx.core_core-ktx",
-        "vendor.sony.charger-V1-java",
-    ],
-
-    optimize: {
-        proguard_flags_files: ["proguard.flags"],
-    },
+android_app_import {
+	name: "XperiaCharger",
+	owner: "sony",
+	apk: "SmartCharger.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	system_ext_specific: true,
 }
