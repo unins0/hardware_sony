@@ -24,7 +24,7 @@
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
-        android:enableOnBackInvokedCallback="false">
+        android:enableOnBackInvokedCallback="true">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="false">
