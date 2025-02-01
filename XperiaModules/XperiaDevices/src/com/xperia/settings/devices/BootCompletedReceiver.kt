@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.settings
+package com.xperia.settings.devices
 
 import android.content.BroadcastReceiver
 import android.content.Context
