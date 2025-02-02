@@ -24,5 +24,6 @@
     <string name="mediavib_enable">Activer</string>
     <string name="mediavib_summary">Fonction vibreur DSP</string>
     <string name="mediavib_level_title">Niveau</string>
+    <string name="mediavib_latency_title">Latence de vibration</string>
     <string name="mediavib_description">Vibre avec la musique</string>
 </resources>

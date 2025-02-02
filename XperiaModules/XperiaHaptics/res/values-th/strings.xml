@@ -24,5 +24,6 @@
     <string name="mediavib_enable">เปิดใช้งาน</string>
     <string name="mediavib_summary">ฟังก์ชันการสั่นแบบ DSP</string>
     <string name="mediavib_level_title">ระดับ</string>
+    <string name="mediavib_latency_title">ความหน่วงเวลาการสั่น</string>
     <string name="mediavib_description">สั่นตามเพลง</string>
 </resources>

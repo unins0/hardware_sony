@@ -17,12 +17,13 @@
 
 <resources>
     <!-- App Name -->
-    <string name="app_name" translatable="true">Xperia Haptik</string>
+    <string name="app_name">Xperia Haptik</string>
 
     <!-- Media Vibration Related Strings -->
     <string name="mediavib_title">Dynamische Vibration</string>
     <string name="mediavib_enable">Aktivieren</string>
     <string name="mediavib_summary">DSP-Vibratorfunktion</string>
     <string name="mediavib_level_title">Stufe</string>
+    <string name="mediavib_latency_title">Vibrationslatenz</string>
     <string name="mediavib_description">Vibriert zur Musik</string>
 </resources>
