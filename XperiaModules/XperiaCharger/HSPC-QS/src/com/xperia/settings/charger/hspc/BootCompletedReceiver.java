@@ -20,11 +20,16 @@ package com.xperia.settings.charger.hspc;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import com.xperia.settings.charger.hspc.HSPCQSTileService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
+
+    private static final String TAG = "XperiaCharger-HSPC";
+
     @Override
     public void onReceive(Context context, Intent intent) {
-        HSPCQSTileService.setHspcState(context, false);
+        Log.i(TAG, "Received intent: " + intent.getAction());
+        HSPCQSTileService.onBoot(context);
     }
 }

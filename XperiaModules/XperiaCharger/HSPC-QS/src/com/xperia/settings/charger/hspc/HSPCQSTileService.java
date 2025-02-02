@@ -22,15 +22,23 @@ import android.service.quicksettings.TileService;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.util.Log;
 import android.content.SharedPreferences;
 import android.os.BatteryManager;
 
 public class HSPCQSTileService extends TileService {
+    private static final String TAG = "HSPCQSTileService";
+
     private static final String ACTION_HSPC = "com.sonymobile.smartcharger.GE_CHARGE";
     private static final String PREFS_NAME = "HSPC_Prefs";
     private static final String KEY_IS_ACTIVE = "is_active";
     private static final String EXTRA_SUSPEND = "SUSPEND";
     private static final String EXTRA_THRESHOLD = "THRESHOLD";
+
+    public static void onBoot(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        prefs.edit().putBoolean(KEY_IS_ACTIVE, false).apply();
+    }
 
     public static void setHspcState(Context context, boolean enable) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -40,6 +48,8 @@ public class HSPCQSTileService extends TileService {
             .putExtra(EXTRA_SUSPEND, enable)
             .putExtra(EXTRA_THRESHOLD, calculateThreshold(context));
         context.sendBroadcast(intent);
+        Log.i(TAG, "Broadcast GE_CHARGE with: " + enable + ", THRESHOLD: " + calculateThreshold(context));
+
     }
 
     public static int calculateThreshold(Context context) {
