@@ -47,7 +47,7 @@ public class HSPCQSTileService extends TileService {
         Intent intent = new Intent(ACTION_HSPC)
             .putExtra(EXTRA_SUSPEND, enable)
             .putExtra(EXTRA_THRESHOLD, calculateThreshold(context));
-        context.sendBroadcast(intent);
+        context.sendBroadcast(intent, ACTION_HSPC);
         Log.i(TAG, "Broadcast GE_CHARGE with: " + enable + ", THRESHOLD: " + calculateThreshold(context));
 
     }
