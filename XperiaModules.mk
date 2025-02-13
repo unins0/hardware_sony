@@ -60,8 +60,7 @@ endif
 
 # Audio Settings
 ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
-	PRODUCT_PACKAGES += \
-	XperiaAudio
+       PRODUCT_PACKAGES += XperiaAudio
 endif
 
 # E-Sim
