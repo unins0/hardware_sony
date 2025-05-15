@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 XperiaLabs Project
+     Copyright (C) 2025 XperiaLabs Project
      Copyright (C) 2021 Paranoid Android
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Whether device supports increased touch sensitvity -->
-    <bool name="config_supportGloveMode">true</bool>
-
+    <!-- Show high touch polling rate -->
+    <bool name="config_supportHighTouchRate">true</bool>
 </resources>

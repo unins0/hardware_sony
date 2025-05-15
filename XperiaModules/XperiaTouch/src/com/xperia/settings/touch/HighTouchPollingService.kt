@@ -23,7 +23,7 @@ class HighTouchPollingService : Service() {
 
     companion object {
         private const val TAG = "HighTouchPollingService"
-        private const val SETTING_KEY = Settings.Secure.TOUCH_SENSITIVITY_ENABLED
+        private const val SETTING_KEY = Settings.Secure.HIGH_TOUCH_RATE_ENABLED
         private const val TS_NODE = "/sys/devices/virtual/sec/tsp/cmd"
         private const val SET_REPORT_RATE_CMD = "doze_mode_change,"
         private const val HIGH_POLLING_RATE = "2"
