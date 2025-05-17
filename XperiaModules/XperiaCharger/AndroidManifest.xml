@@ -46,7 +46,9 @@
 
         <service
             android:name=".BatteryMonitorService"
-            android:permission="BatteryMonitorService">
+            android:permission="BatteryMonitorService"
+            android:exported="false"
+            android:stopWithTask="false">
         </service>
 
         <activity
