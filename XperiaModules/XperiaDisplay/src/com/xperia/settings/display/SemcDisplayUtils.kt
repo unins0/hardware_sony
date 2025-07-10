@@ -22,16 +22,16 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
     companion object {
         private const val TAG = "SemcDisplayUtils"
         private val WhiteBalanceProfiles = arrayListOf(
-            RGBProfile(0.8627451f, 0.6666667f, 0.0f),
-            RGBProfile(0.627451f, 0.5098039f, 0.0f),
-            RGBProfile(0.3137255f, 0.35294116f, 0.0f),
-            RGBProfile(0.09019607f, 0.21568628f, 0.0f),
-            RGBProfile(0.0f, 0.0f, 0.0f),
-            RGBProfile(0.0f, 0.11764706f, 0.2352941f),
-            RGBProfile(0.0f, 0.1372549f, 0.35294116f),
-            RGBProfile(0.0f, 0.1372549f, 0.4509804f),
-            RGBProfile(0.0f, 0.17647058f, 0.5686275f),
-            RGBProfile(0.0f, 0.25490195f, 0.6078431f)
+            RGBProfile(0.86274509f, 0.66666666f, 0.00000000f), // 5000
+            RGBProfile(0.62745098f, 0.50980392f, 0.00000000f), // 5500
+            RGBProfile(0.31372549f, 0.35294117f, 0.00000000f), // 6100
+            RGBProfile(0.09019607f, 0.21568627f, 0.00000000f), // 6500
+            RGBProfile(0.00000000f, 0.00000000f, 0.00000000f), // 7000
+            RGBProfile(0.00000000f, 0.11764706f, 0.23529411f), // 7500
+            RGBProfile(0.00000000f, 0.13725490f, 0.35294117f), // 8000
+            RGBProfile(0.00000000f, 0.13725490f, 0.45098039f), // 8500
+            RGBProfile(0.00000000f, 0.17647058f, 0.56862745f), // 9000
+            RGBProfile(0.00000000f, 0.25490196f, 0.60784313f), // 9300
         )
 
         const val CREATOR_MODE_ENABLE = "cm_enable"
