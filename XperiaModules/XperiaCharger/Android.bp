@@ -21,4 +21,15 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+
+    required: [
+        "config-com.xperia.settings.charger",
+    ],
+}
+
+prebuilt_etc {
+    name: "config-com.xperia.settings.charger",
+    sub_dir: "sysconfig",
+    src: "config-com.xperia.settings.charger.xml",
+    filename_from_src: true,
 }
