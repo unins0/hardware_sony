@@ -14,16 +14,6 @@
 # limitations under the License.
 #
 
-# Flags
-TARGET_SUPPORTS_CREATOR_MODE ?= false
-TARGET_SUPPORTS_MEDIA_VIBRATION ?= false
-TARGET_SUPPORTS_HIGH_REFRESH_RATE ?= false
-TARGET_SUPPORTS_HIGH_POLLING_RATE ?= false
-TARGET_SUPPORTS_SOUND_ENHANCEMENT ?= false
-TARGET_SUPPORTS_SOUND_ENHANCEMENT_DTS ?= false
-TARGET_SUPPORTS_BATTERY_CARE ?= false
-TARGET_SUPPORTS_EUICC ?= false
-
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/XperiaModules
@@ -71,4 +61,10 @@ endif
 # E-Sim
 ifeq ($(TARGET_SUPPORTS_EUICC),true)
 	PRODUCT_PACKAGES += XperiaEuicc
+endif
+
+# Apps Disabler
+ifeq ($(TARGET_SHIPS_XPERIA_DISABLER),true)
+include hardware/sony/XperiaModules/XperiaDisabler/sepolicy/SEPolicy.mk
+        PRODUCT_PACKAGES += XperiaDisabler
 endif

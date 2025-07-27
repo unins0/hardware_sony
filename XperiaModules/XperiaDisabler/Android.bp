@@ -1,0 +1,42 @@
+//
+// Copyright (C) 2025 XperiaLabs Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "XperiaDisabler",
+
+    srcs: [
+        "src/**/*.kt",
+    ],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+
+    required: [
+        "com.xperia.settings.disabler.xml",
+        "hidden-api-whitelist-com.xperia.settings.disabler.xml",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
+
+prebuilt_etc {
+    name: "com.xperia.settings.disabler.xml",
+    sub_dir: "permissions",
+    src: "com.xperia.settings.disabler.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "hidden-api-whitelist-com.xperia.settings.disabler.xml",
+    sub_dir: "sysconfig",
+    src: "hidden-api-whitelist-com.xperia.settings.disabler.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+}

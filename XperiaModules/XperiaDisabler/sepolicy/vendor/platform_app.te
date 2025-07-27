@@ -1,0 +1,2 @@
+# XperiaDisabler
+get_prop(platform_app, vendor_radio_prop)
