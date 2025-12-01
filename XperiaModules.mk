@@ -54,7 +54,7 @@ include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
 endif
 
 # Audio Settings
-ifeq ($(TARGET_SUPPORTS_SOUND_ENHANCEMENT),true)
+ifeq ($(TARGET_SHIPS_SOUND_ENHANCEMENT),true)
        PRODUCT_PACKAGES += XperiaAudio
 endif
 
