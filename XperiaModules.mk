@@ -18,11 +18,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/XperiaModules
 
-# Devices
-ifeq ($(TARGET_SHIPS_SONY_APPS),true)
-        PRODUCT_PACKAGES += XperiaDevices
-endif
-
 # Battery Care
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
 include hardware/sony/XperiaModules/XperiaCharger/sepolicy/SEPolicy.mk
@@ -33,11 +28,6 @@ endif
 ifeq ($(TARGET_SUPPORTS_CREATOR_MODE),true)
 include hardware/sony/XperiaModules/XperiaDisplay/sepolicy/SEPolicy.mk
 	PRODUCT_PACKAGES += XperiaDisplay
-endif
-
-# Media Vibration
-ifeq ($(TARGET_SUPPORTS_MEDIA_VIBRATION),true)
-        PRODUCT_PACKAGES += XperiaHaptics
 endif
 
 # Refresh Rate
