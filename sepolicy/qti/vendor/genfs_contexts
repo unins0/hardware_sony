@@ -69,7 +69,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-a
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:somc,battchg_ext/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,trustedvm@d0800000/subsys2/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:somc_water_detection/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/soc:qcom,smp2p-npu/wakeup u:object_r:sysfs_wakeup:s0
 
 # Leds
 genfscon sysfs /devices/platform/soc/8804000.sdhci/leds u:object_r:sysfs_leds:s0
