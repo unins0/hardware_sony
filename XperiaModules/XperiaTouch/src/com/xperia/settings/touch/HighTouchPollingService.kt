@@ -23,7 +23,7 @@ class HighTouchPollingService : Service() {
 
     companion object {
         private const val TAG = "HighTouchPollingService"
-        private const val SETTING_KEY = Settings.Secure.HIGH_TOUCH_RATE_ENABLED
+        private const val SETTING_KEY = Settings.System.HIGH_TOUCH_POLLING_RATE_ENABLE
         private const val TS_NODE = "/sys/devices/virtual/sec/tsp/cmd"
         private const val SET_REPORT_RATE_CMD = "doze_mode_change,"
         private const val HIGH_POLLING_RATE = "2"
@@ -71,7 +71,7 @@ class HighTouchPollingService : Service() {
         super.onCreate()
         mPowerManager = getSystemService(PowerManager::class.java)
         contentResolver.registerContentObserver(
-            Settings.Secure.getUriFor(SETTING_KEY),
+            Settings.System.getUriFor(SETTING_KEY),
             false,
             mSettingObserver
         )
@@ -99,7 +99,7 @@ class HighTouchPollingService : Service() {
 
     private fun updateTouchPollingState(readSetting: Boolean) {
         if (readSetting) {
-            mEnabled = Settings.Secure.getInt(contentResolver, SETTING_KEY, 0) == 1
+            mEnabled = Settings.System.getInt(contentResolver, SETTING_KEY, 0) == 1
         }
 
         try {
