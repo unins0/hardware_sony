@@ -8,7 +8,6 @@ add_service(vendor_hal_disp_default, hal_disp_service)
 
 binder_call(vendor_hal_disp_default, servicemanager)
 
-allow vendor_hal_disp_default devicesetting_app:binder call;
 
 unix_socket_connect(vendor_hal_disp_default, tad, tad)
 
